@@ -19,6 +19,7 @@ body {
   width: 70%;
   margin: 0 auto;
   font-family: "Karla", sans-serif;
+  background-color: #edefee;
 }
 
 h1 {
@@ -184,4 +185,20 @@ button:hover {
 
 .footer section {
   flex: 1;
+}
+
+.hero-image {
+  max-height: 400px;
+}
+
+.margin-bottom-025em {
+  margin-bottom: 0.25em;
+}
+
+.about-section{
+  font-weight: 100;
+}
+
+.border-radius-1em {
+  border-radius: 1em;
 }
