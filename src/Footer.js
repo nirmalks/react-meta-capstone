@@ -1,30 +1,32 @@
 function Footer() {
     return (
-        <footer>
-            <img src=""></img>
-            <section>
+        <footer className="flex-row footer">
+                <section className="flex-column">
+            <img alt="Little lemon logo" src="logo.png" className="logo"/>
+            </section>
+            <section className="flex-column">
                 <h4>Navigation</h4>
                 <nav>
                     <ul>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
+                        <li><a href="/home" key={'home'}>Home</a></li>
+                        <li><a href="#about" key={'about'}>About</a></li>
+                        <li><a href="#menu" key={'menu'}>Menu</a></li>
+                        <li><a href="#reservations" key={'reservations'}>Reservations</a></li>
+                        <li><a href="#orders" key={'orders'}>Order Online</a></li>
+                        <li><a href="#login" key={'login'}>Login</a></li>
                     </ul>
                 </nav>
             </section>
 
-            <section>
+            <section className="flex-column">
                 <h4>Contact</h4>
-                <p>Address</p>
-                <p>Phone number</p>
+                <p>Chennai, India</p>
+                <p>1234567890</p>
                 <p>email</p>
             </section>
 
-            <section>
-                <h4>Social media link</h4>
+            <section className="flex-column">
+                <h4>Socials</h4>
                 <nav>
                     <ul>
                         <li><a href="#">Facebook</a></li>
