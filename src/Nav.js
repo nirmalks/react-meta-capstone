@@ -1,5 +1,4 @@
 function Nav() {
-    const links = []
     return (
         <nav className="nav">
             <ul>

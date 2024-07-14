@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 function Hero() {
     return (
         <section className="hero-section">
@@ -11,7 +12,7 @@ function Hero() {
             1500s, when an unknown printer took a galley of type and scrambled
             it to make a type specimen book.
           </p>
-          <button className="primary-btn">Reserve a Table</button>
+          <button className="primary-btn"><Link to={"/booking"}>Reserve a Table</Link></button>
         </div>
         <div className="self-center">
           <img

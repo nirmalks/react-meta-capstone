@@ -1,6 +1,0 @@
-function Bookingpage() {
-    return (
-        ``
-    );
-}
-export default Bookingpage;
