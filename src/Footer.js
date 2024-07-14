@@ -22,16 +22,16 @@ function Footer() {
                 <h4>Contact</h4>
                 <p>Chennai, India</p>
                 <p>1234567890</p>
-                <p>email</p>
+                <p>admin@mail.com</p>
             </section>
 
             <section className="flex-column">
                 <h4>Socials</h4>
                 <nav>
                     <ul>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Instagram</a></li>
+                        <li><a href="www.facebook.com">Facebook</a></li>
+                        <li><a href="www.x.com">Twitter</a></li>
+                        <li><a href="www.instagram.com">Instagram</a></li>
                     </ul>
                 </nav>
             </section>

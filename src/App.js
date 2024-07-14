@@ -1,16 +1,16 @@
 import './App.css';
-import Header from './Header';
-import Footer from './Footer';
-import Main from './Main';
-
+import Homepage from './Homepage';
+import Bookingpage from './Bookingpage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <>
-      <Header>
-      </Header>
-      <Main></Main>
-      <Footer>
-      </Footer>
+        <Router>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/booking" element={<Bookingpage />} />
+      </Routes>
+    </Router>
     </>
   );
 }

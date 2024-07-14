@@ -2,7 +2,7 @@ import Nav from './Nav';
 
 function Header() {
     return (
-        <header className='Header'>
+        <header className='flex-row'>
             <div className='flex-row'>
                 <img alt="Little lemon logo" src="logo.png" className="logo"/>
                 <h1>Little Lemon</h1>

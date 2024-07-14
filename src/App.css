@@ -202,3 +202,27 @@ button:hover {
 .border-radius-1em {
   border-radius: 1em;
 }
+
+@media (max-width: 768px) {
+  .flex-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-section {
+    flex-direction: column;
+  }
+
+  .hero-section div {
+    flex: 1 0 100%;
+  }
+
+  body {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .second-about-image {
+    top:0;
+    left:0;
+  }
+}
