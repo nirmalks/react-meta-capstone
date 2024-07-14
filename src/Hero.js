@@ -12,7 +12,7 @@ function Hero() {
             1500s, when an unknown printer took a galley of type and scrambled
             it to make a type specimen book.
           </p>
-          <button className="primary-btn"><Link to={"/booking"}>Reserve a Table</Link></button>
+          <Link to={"/booking"} className="primary-btn"> Reserve a Table</Link>
         </div>
         <div className="self-center">
           <img
