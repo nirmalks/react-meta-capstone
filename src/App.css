@@ -226,18 +226,14 @@ button:hover {
 
 .form-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  max-width: 600px;
+  grid-template-columns: 1fr;
+  max-width: 300px;
   grid-gap: 2rem;
   margin: 1.5em 0;
 }
 
 .align-items-center {
   align-items: center;
-}
-
-.span-2-columns {
-  grid-column: span 2;
 }
 
 @media (max-width: 768px) {
@@ -272,7 +268,4 @@ button:hover {
     align-items: flex-start;
   }
 
-  .span-2-columns {
-    grid-column: auto;
-  }
 }

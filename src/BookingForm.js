@@ -66,7 +66,7 @@ function BookingForm({
         </select>
         <input
           type="submit"
-          className="primary-btn span-2-columns"
+          className="primary-btn"
           value="Make your reservation"
           disabled={!isFormValid}
         />
