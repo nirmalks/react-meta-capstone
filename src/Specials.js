@@ -3,7 +3,7 @@ function Specials() {
         <section className="flex-column">
         <div className="flex-row">
           <h2>This Week's Specials!</h2>
-          <button className="primary-btn">Online Menu</button>
+          <button className="primary-btn" aria-label="On Click">Online Menu</button>
         </div>
         <div className="flex-row space-between">
           <section className="grey-background flex-column">

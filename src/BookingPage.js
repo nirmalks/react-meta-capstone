@@ -1,13 +1,18 @@
+
 import Header from "./Header";
 import Footer from "./Footer";
 import BookingForm from "./BookingForm";
 import { useReducer, useState } from "react";
+import { fetchAPI, submitAPI } from "./Api";
+import { useNavigate } from "react-router-dom";
 
-const initializeTimes = () => ["17:00", "18:00", "19:00", "20:00", "21:00"];
+const initializeTimes = () => {
+ return fetchAPI(new Date());
+};
+
 const updateTimes = (state, action) => {
-  console.log('insdie upate tiem', state)
   console.log('insdie upate action', action)
-  return initializeTimes();
+  return fetchAPI(new Date(action.date));
 };
 
 function BookingPage() {
@@ -15,20 +20,21 @@ function BookingPage() {
   const [time, setTime] = useState("17:00");
   const [guests, setGuests] = useState("1");
   const [occasion, setOccasion] = useState("Birthday");
-  const handleSubmit = (e) => {
+  const navigate = useNavigate(); // Initialize useNavigate hook
+  const submitForm = (e) => {
       e.preventDefault();
-      console.log(date)
-      console.log(time)
-      console.log(guests)
-      console.log(occasion)
-      console.log('form submitted')
+      const formData = { date, time , guests, occasion};
+      const submitResult = submitAPI(formData);
+      if(submitResult) {
+        navigate('/booking-success');
+      }
   }
 
   const [availableTimes, dispatchTimes] = useReducer(updateTimes, initializeTimes());
   return (
     <>
       <Header></Header>
-      <main>
+      <main className="flex-column align-items-center">
         <BookingForm
           date={date}
           setDate={setDate}
@@ -40,7 +46,7 @@ function BookingPage() {
           availableTimes={availableTimes}
           dispatchTimes={dispatchTimes}
           setOccasion={setOccasion}
-          handleSubmit={handleSubmit}
+          handleSubmit={submitForm}
         />
       </main>
       <Footer></Footer>

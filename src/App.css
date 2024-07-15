@@ -61,7 +61,9 @@ nav ul li a {
   color: var(--primary);
   font-weight: bold;
 }
-
+a {
+  display: inline-block;
+}
 a:hover {
   color: var(--primary-yellow);
 }
@@ -77,7 +79,8 @@ a:hover {
 
 .primary-btn {
   background: var(--primary-yellow);
-  padding: 1em 2em;
+  margin: 1rem 0;
+  padding: 1rem 1rem;
   border-radius: 1em;
   font-weight: bold;
   cursor: pointer;
@@ -93,6 +96,10 @@ a:hover {
   line-height: 1.5em;
 }
 
+.hero-section div:first-child {
+  flex-basis: 40%;
+  margin-right: 1em;
+}
 .hero-section div {
   flex: 1 0 50%;
 }
@@ -219,9 +226,18 @@ button:hover {
 
 .form-grid {
   display: grid;
-  max-width: 200px;
-  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  max-width: 600px;
+  grid-gap: 2rem;
   margin: 1.5em 0;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.span-2-columns {
+  grid-column: span 2;
 }
 
 @media (max-width: 768px) {
@@ -246,5 +262,17 @@ button:hover {
   .second-about-image {
     top: 0;
     left: 0;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flex-column {
+    align-items: flex-start;
+  }
+
+  .span-2-columns {
+    grid-column: auto;
   }
 }

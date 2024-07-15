@@ -1,3 +1,4 @@
+import { isBookingFormValid } from "./Utils";
 function BookingForm({
   date,
   setDate,
@@ -11,14 +12,20 @@ function BookingForm({
   availableTimes,
   dispatchTimes,
 }) {
+  const isFormValid = isBookingFormValid(date, time, guests, occasion);
   return (
     <>
       <h2>Reserve a Table</h2>
-      <form className="form-grid">
+      <form
+        className="form-grid"
+        name="booking-form"
+        onSubmit={(event) => handleSubmit(event)}
+      >
         <label htmlFor="res-date">Choose date</label>
         <input
           type="date"
           id="res-date"
+          required
           onChange={(e) => {
             setDate(e.target.value);
             dispatchTimes({ date: e.target.value });
@@ -27,7 +34,8 @@ function BookingForm({
         />
         <label htmlFor="res-time">Choose time</label>
         <select
-          id="res-time "
+          id="res-time"
+          required
           onChange={(e) => setTime(e.target.value)}
           value={time}
         >
@@ -41,6 +49,7 @@ function BookingForm({
           placeholder="1"
           min="1"
           max="10"
+          required
           id="guests"
           onChange={(e) => setGuests(e.target.value)}
           value={guests}
@@ -50,15 +59,16 @@ function BookingForm({
           id="occasion"
           onChange={(e) => setOccasion(e.target.value)}
           value={occasion}
+          required
         >
           <option>Birthday</option>
           <option>Anniversary</option>
         </select>
         <input
           type="submit"
-          className="primary-btn"
+          className="primary-btn span-2-columns"
           value="Make your reservation"
-          onClick={(event) => handleSubmit(event)}
+          disabled={!isFormValid}
         />
       </form>
     </>
